@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Code Rally Perspective
+Bundle-SymbolicName: org.eclipse.demo.plugins.labs.coderally.perspective; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.plugins.labs
+Eclipse-AutoStart: true
+Bundle-Vendor: Espirity
+Bundle-Activator: org.eclipse.plugins.labs.coderally.perspective.CodeRallyPerspectivePlugin

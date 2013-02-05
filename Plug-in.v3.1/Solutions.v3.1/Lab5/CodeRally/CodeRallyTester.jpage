@@ -1,0 +1,3 @@
+CodeRallyScoreboard scoreboard = 
+	new CodeRallyScoreboard("c:/temp/coderally/scoreboard.txt");
+scoreboard.getElements();

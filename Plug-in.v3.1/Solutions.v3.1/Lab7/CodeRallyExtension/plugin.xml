@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.ui.actionSets">
+	<actionSet
+	  id="org.eclipse.plugins.labs.coderally.actions"
+	  label="Code Rally Extension"
+	  visible="false">
+	    <menu
+		 id="org.eclipse.plugins.labs.coderally.actions.menu"
+	    	 label="Code Rally"
+	    	 path="additions">
+	   	 <separator 
+			name="coderally">
+		 </separator>
+		 <groupMarker
+                  name="runPrivateTrack">
+         </groupMarker>
+         <groupMarker
+                  name="debugPrivateTrack">
+             </groupMarker>
+		 <groupMarker
+                  name="runPublicTrack">
+             </groupMarker>
+		 <groupMarker
+                  name="debugPublicTrack">
+             </groupMarker>
+		 <groupMarker
+                  name="submitCode">
+             </groupMarker>
+	    </menu>
+	    <action 
+		 id="org.eclipse.plugins.labs.coderally.actions.runprivate"
+		 menubarPath="org.eclipse.plugins.labs.coderally.actions.menu/runPrivateTrack"
+		 label="Run The Private Track"
+		 icon="icons/run.gif"
+		 class="org.eclipse.plugins.labs.coderally.actions.TestAction">
+	    </action>
+	    <action 
+		 id="org.eclipse.plugins.labs.coderally.actions.debugprivate"
+		 menubarPath="org.eclipse.plugins.labs.coderally.actions.menu/debugPrivateTrack"
+		 label="Debug The Private Track"
+		 icon="icons/debug.gif"
+		 class="com.ibm.jgfw.plugin.TestDebugAction">
+	    </action>
+	    <action 
+		 id="org.eclipse.plugins.labs.coderally.actions.runpublic"
+		 menubarPath="org.eclipse.plugins.labs.coderally.actions.menu/runPublicTrack"
+		 label="Run The Public Track"
+		 icon="icons/tournament.gif"
+		 class="com.ibm.jgfw.plugin.TournamentAction">
+	    </action>
+	    <action 
+		 id="org.eclipse.plugins.labs.coderally.actions.debugpublic"
+		 menubarPath="org.eclipse.plugins.labs.coderally.actions.menu/debugPublicTrack"
+		 label="Debug The Public Track"
+		 icon="icons/tournament-debug.gif"
+		 class="com.ibm.jgfw.plugin.TournamentDebugAction">
+	    </action>
+	    <action 
+		 id="org.eclipse.plugins.labs.coderally.actions.submitcode"
+		 menubarPath="org.eclipse.plugins.labs.coderally.actions.menu/submitCode"
+		 label="Sumbit The Code"
+		 icon="icons/submit.gif"
+  		 class="com.ibm.jgfw.plugin.SubmitAction">
+	    </action>
+	</actionSet>     
+  </extension>
+
+</plugin>
