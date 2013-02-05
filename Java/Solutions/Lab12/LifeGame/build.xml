@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<project name="AntDemo" default="compile" >
+
+	<target name="init">
+		<mkdir dir="build/classes" />
+		<mkdir dir="bin" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="org/eclipse/lifegame/" destdir="build/classes" />
+	</target>
+
+	<target name="archive" depends="compile">
+		<jar destfile="bin/lifegame.jar"
+				basedir="build/classes" />
+	</target>
+	
+	<target name="execute" depends="compile">
+		<java
+			classname="org.eclipse.lifegame.test.LifeGameTester"
+			classpath="build/classes">
+		</java>
+	</target>
+
+	<target name="clean" depends="init">
+		<delete dir="build" />
+		<delete dir="bin" />
+	</target>
+
+</project>
+	
